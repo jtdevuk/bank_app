@@ -1,11 +1,11 @@
-<h1 class="col-12 text-center"> List of customers <h1>
+<h1 class="col-12 text-center"> List of customers </h1>
   <div class="row justify-content-center">
   <% @customers.each do |customer| %>
     <div class="card m-3 col-4" >
       <div class="card-body">
         <h5 class="card-title"><%= customer.first_name %> <%= customer.last_name %></h5>
         <h5 class="card-text"><%= customer.email %></h5>
-          <a href="#" class="btn btn-info btn-primary">View customer details</a>
+          <%= link_to "View customer details", customer_path(customer), class: "btn btn-info btn-primary" %>
       </div>
     </div>
   <% end %>
