@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :customers
+  resources :accounts
   root to: 'pages#home'
   get 'login', to: 'logins#new'
   get 'logout', to: 'logins#destroy'

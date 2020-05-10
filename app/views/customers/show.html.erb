@@ -8,3 +8,18 @@
       </div>
     </div>
   </div>
+
+  <% if @customer.accounts.any? %>
+    <% @customer.accounts.each do |acc| %>
+      <div class="row justify-content-center">
+      <div class="card m-3 col-12" >
+        <div class="card-body">
+          <h5 class="card-title"><%= acc.account_name %>
+          <h5 class="card-text"><%= acc.account_balance %></h5>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% else %>
+      <%= link_to "Open an account", new_account_path, class: "btn btn-info btn-primary" %>
+  <% end %>
