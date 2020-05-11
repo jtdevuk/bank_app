@@ -10,4 +10,11 @@ helper_method :current_user, :logged_in?
     !!current_user
   end
 
+  def require_user
+    if !logged_in?
+    flash[:notice] = "You must be logged in to access that page"
+    redirect_to root_path
+    end
+  end
+
 end
