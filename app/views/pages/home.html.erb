@@ -6,24 +6,27 @@
 
   <div class="row p-5">
     <div class="card" style="width: 18rem;">
-      <img src="/assets/savings" class="card-img-top" alt="Savings Account">
+      <img src="/assets/current" class="card-img-top" alt="Current Account">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Current Account</h5>
+        <p class="card-text">An account with quick and easy access to your funds for day to day spending.</p>
+        <%= link_to "Open current account", new_account_path, class: "btn btn-info" %>
       </div>
     </div>
   </div>
 
   <div class="row p-5">
     <div class="card" style="width: 18rem;">
-      <img src="/assets/current" class="card-img-top" alt="Current Account">
+      <img src="/assets/savings" class="card-img-top" alt="Savings Account">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">JankoBank Savings Account</h5>
+        <p class="card-text">Our highest interest account for those rainy day savings</p>
+        <%= link_to "Open savings account", new_account_path, class: "btn btn-info" %>
       </div>
     </div>
   </div>
 
+  <div class="row p-5">
+    <%= link_to "New customer? Click here to register an account", root_path, class: "btn btn-info" %>
+  </div>
 </div>
