@@ -1,14 +1,19 @@
 <h1 class="col-12 text-center"> Sign in to your account </h1>
 
-<div class="container">
-<%= form_with(scope: :login, url: login_path, local: true, class: "form-signin" ) do |form| %>
-  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-  <div class="form-group">
-    <%= form.email_field :email, class: "form-control col-6", placeholder: "Email address" %>
-  </div>
-  <div class="form-group row">
-    <%= form.password_field :password, class: "form-control col-6", placeholder: "Password" %>
-  </div>
-  <%= form.button "Update customer details", class: "btn btn-lg btn-info btn-block col-6" %>
-<% end %>
+
+<div class="row justify-content-center">
+  <%= form_with(scope: :login, url: login_path, local: true, class: "form-signin col-6 bg-light" ) do |form| %>
+    <div class="form-group row justify-content-center">
+    <h1 class="h3 mb-3 font-weight-normal">Please enter your details</h1>
+    </div>
+    <div class="form-group row justify-content-center">
+      <%= form.email_field :email, class: "form-control col-6", placeholder: "Email address" %>
+    </div>
+    <div class="form-group row justify-content-center">
+      <%= form.password_field :password, class: "form-control col-6", placeholder: "Password" %>
+    </div>
+    <div class="form-group row justify-content-center">
+    <%= form.button "Sign in", class: "btn btn-md btn-info btn-block col-6" %>
+    </div>
+  <% end %>
 </div>
