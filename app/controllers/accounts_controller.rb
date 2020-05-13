@@ -16,9 +16,8 @@ class AccountsController < ApplicationController
     if @account.save
       flash[:notice] = "Account created successfully"
       redirect_to current_user
-    else
-      flash[:notice] = "Something went wrong"
-      redirect_to current_user
+    else    
+      render 'new'
     end
   end
 
